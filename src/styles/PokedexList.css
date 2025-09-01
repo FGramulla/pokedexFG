@@ -1,0 +1,161 @@
+/* Estilos generales para la lista de Pokémon */
+.pokedex-list {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-image: url(/img/fondoHomeTop.gif); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Cubre todo el espacio del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+}
+
+.pokedex-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo para la barra de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px; /* Espaciado entre los dos campos de búsqueda */
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+/* Barra de búsqueda para el número de Pokémon (más corta) */
+.search-number-bar {
+  width: 100%;
+  max-width: 150px; /* Más corto que el campo de búsqueda general */
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-number-bar:focus {
+  border-color: #007bff;
+}
+
+/* Filtro de tipos */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.type-filter-button {
+  padding: 8px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-filter-button.selected {
+  background-color: var(--primary-color-shadow);
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 1);
+}
+
+.type-filter-button:hover {
+  background-color: var(--primary-color-shadow);
+}
+
+/* Estilos para la cuadrícula de Pokémon */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Estilo para las tarjetas de Pokémon */
+.pokemon-card {
+  background-color: #fff;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-grid a {
+  text-decoration: none; /* Elimina el subrayado de todos los enlaces */
+}
+
+.pokemon-card a {
+  color: inherit; /* Asegura que el color del enlace sea el mismo que el texto */
+}
+
+.pokemon-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pokemon-identificacion {
+  font-size: 1.1rem;
+  color: #888;
+  margin: 5px 0;
+}
+
+.pokemon-nombre {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.button-container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more-button{
+  font-size: 20px;
+  width: 200px;
+  padding: 1rem;
+  background-color: rgb(3, 210, 3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.load-more-button:hover{
+  transform: scale(1.1);
+  background-color: rgb(0, 255, 0);
+  box-shadow: 0px 0px 40px rgb(0, 255, 0);
+  color: white;
+  border: none;
+}
+
+  
+  

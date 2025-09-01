@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #054cff; /* Color base principal */
+  --primary-color-shadow: #002c9a; /* Color base principal */
+  --gradiant: linear-gradient( #8caf88, #6ecec9); /* Gradiente de gris a verde azulado */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}

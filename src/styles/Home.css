@@ -1,0 +1,157 @@
+/* General Styles */
+.home {
+    background: var(--gradiant); /* Azul vibrante del header */
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-top {
+    width: 100%;
+    background-image: url(/img/fondoHomeTop.gif); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubre todo el espacio del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase para la animación */
+.slide-down {
+    animation: slideDown 3s ease-out forwards;
+}
+
+/* Logo Styles */
+.home-top .logo {
+    font-size: 3rem;
+    opacity: 0; /* Inicialmente oculto */
+}
+
+.home-top .logo.slide-down {
+    opacity: 1; /* Visible después de la animación */
+}
+
+/* Subtitle Button Styles */
+.home-top .subtitle button {
+    font-size: 20px;
+    width: 200px;
+    padding: 1rem;
+    background-color: rgb(3, 210, 3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    opacity: 0; /* Inicialmente oculto */
+}
+
+.home-top .subtitle button.slide-down {
+    opacity: 1; /* Visible después de la animación */
+}
+
+.home-top .subtitle button:hover {
+    transform: scale(1.1);
+    background-color: rgb(0, 255, 0);
+    box-shadow: 0px 0px 40px rgb(0, 255, 0);
+    color: white;
+    border: none;
+}
+
+/* Left Section */
+.home-left {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-title {
+    text-align: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000; /* Amarillo Pokémon */
+    text-shadow: 2px 2px 4px rgba(245, 245, 245, 0.5);
+}
+
+.home-description {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.home-left button {
+    margin-top: 20px;
+    background-color: #054cff; /* Azul Pokémon */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-left button:hover {
+    background-color: #002c9a; /* Azul Pokémon oscuro */
+    transform: scale(1.15);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Right Section */
+.home-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* For the GIF */
+.pokemon-gif {
+    width: 300px; /* Establece un tamaño fijo para que no cambie */
+    height: 300px; /* Asegúrate de que la altura también esté controlada */
+    object-fit: cover; /* Esto asegura que el GIF se recorte adecuadamente en caso de que no tenga la misma relación de aspecto */
+    border-radius: 10px; /* Opcional: bordes redondeados para un toque estético */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-left {
+        padding: 10px;
+    }
+
+    .home-title {
+        font-size: 36px;
+    }
+
+    .pokemon-gif {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}

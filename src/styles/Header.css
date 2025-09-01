@@ -1,0 +1,132 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--gradiant); /* Azul vibrante */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-logo a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header-logo a:hover {
+  color: #3e0079; /* Azul vibrante del header */
+}
+
+.header-nav {
+  flex: 1;
+  text-align: center;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu li {
+  position: relative;
+}
+
+.header-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-menu a:hover {
+  background-color: #3e0079; /* Azul vibrante del header */
+  color: #ffffff;
+}
+
+/* Dropdown menu styles */
+.header-menu .dropdown {
+  position: relative;
+}
+
+.header-menu .dropdown .dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  border-radius: 4px;
+  min-width: 180px; /* Optional, sets a minimum width for the dropdown */
+}
+
+.header-menu .dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown when hovering over the parent */
+}
+
+/* Dropdown menu item styles */
+.header-menu .dropdown-menu li a {
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #00000082;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu .dropdown-menu li a:hover {
+  background-color: #000000; /* Hover effect */
+}
+
+/* Call to Action Button */
+.header-right .cta-button {
+  background-color: #05d1ff; /* Amarillo Pokémon */
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-right .cta-button:hover {
+  background-color: #007e9a; /* Amarillo Pokémon */
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header-right .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+  
